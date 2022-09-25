@@ -7,14 +7,37 @@ import IconAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import IconFoundation from 'react-native-vector-icons/Foundation';
 import IconIonicons from 'react-native-vector-icons/Ionicons';
 import { MapView } from '../components';
-import { Articles } from './Articles';
+// import { Articles } from './Articles';
+import { ArticleView } from './ArticleView';
 
-const RecentsRoute = () => <Text>Recents</Text>;
+const RecentsRoute = () => (
+  <Text
+    style={{
+      display: 'flex',
+      flex: 1,
+      textAlignVertical: 'center',
+      textAlign: 'center',
+    }}
+  >
+    Noticias
+  </Text>
+);
 
-const NotificationsRoute = () => <Text>Notifications</Text>;
+const NotificationsRoute = () => (
+  <Text
+    style={{
+      display: 'flex',
+      flex: 1,
+      textAlignVertical: 'center',
+      textAlign: 'center',
+    }}
+  >
+    Sobre o App
+  </Text>
+);
 
 const Home = () => {
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(1);
   const [routes] = useState([
     {
       key: 'mapa',
@@ -31,7 +54,7 @@ const Home = () => {
       ),
     },
     {
-      key: 'articles',
+      key: 'articleView',
       title: 'Artigos',
       focusedIcon: () => (
         <View style={{ paddingTop: 2 }}>
@@ -76,7 +99,7 @@ const Home = () => {
 
   const renderScene = BottomNavigation.SceneMap({
     mapa: MapView,
-    articles: Articles,
+    articleView: ArticleView,
     newspaper: RecentsRoute,
     about: NotificationsRoute,
   });

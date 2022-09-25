@@ -27,8 +27,8 @@ export const MyMap = () => {
     setRegion({
       latitude,
       longitude,
-      latitudeDelta: 0.0322,
-      longitudeDelta: 0.0021,
+      latitudeDelta: 0.09,
+      longitudeDelta: 0.18,
     });
   };
   useEffect(() => {
