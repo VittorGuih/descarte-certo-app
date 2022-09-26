@@ -37,7 +37,7 @@ const NotificationsRoute = () => (
 );
 
 const Home = () => {
-  const [index, setIndex] = useState(1);
+  const [index, setIndex] = useState(0);
   const [routes] = useState([
     {
       key: 'mapa',

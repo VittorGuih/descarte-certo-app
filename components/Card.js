@@ -17,11 +17,11 @@ const CardArticle = ({
         itemContent: { content },
       });
     }}
-    elevation={3}
+    elevation={2}
     style={{
       marginLeft: 8,
       marginRight: 8,
-      backgroundColor: 'rgb(238, 216, 252)',
+      backgroundColor: 'rgb(244, 232, 251)',
       marginBottom: lastCard ? 16 : 8,
       marginTop: 8,
     }}
